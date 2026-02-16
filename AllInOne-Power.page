@@ -1,46 +1,56 @@
 [Face-94053970295360][Appearance]
 chartFace=org.kde.ksysguard.linechart
 title=Temperatures
-updateRateLimit=1500
+updateRateLimit=1000
 
 [Face-94053970295360][SensorColors]
 cpu/all/averageTemperature=61,145,233
 gpu/gpu1/temperature=233,78,61
-lmsensors/nct6686-isa-0a20/temp1=170,255,255
-lmsensors/nct6686-isa-0a20/temp2=232,61,233
-lmsensors/nct6686-isa-0a20/temp3=0,0,0
+lmsensors/mt7921_phy0-pci-0400/temp1=255,237,43
+lmsensors/nct6686-isa-0a20/temp1=0,255,255
+lmsensors/nct6686-isa-0a20/temp2=255,85,255
+lmsensors/nct6686-isa-0a20/temp3=0,85,255
 lmsensors/nvme-pci-0300/temp1=0,170,0
 lmsensors/r8169_0_400:00-mdio-0/temp1=233,186,61
-lmsensors/spd5118-i2c-8-51/temp1=157,61,233
+lmsensors/r8169_0_500:00-mdio-0/temp1=255,170,0
+lmsensors/spd5118-i2c-8-51/temp1=142,56,212
 power=61,233,115
 
 [Face-94053970295360][SensorLabels]
 cpu/all/averageTemperature=CPU
 gpu/gpu1/temperature=GPU
+lmsensors/mt7921_phy0-pci-0400/temp1=WiFi
 lmsensors/nvme-pci-0300/temp1=SSD
 lmsensors/r8169_0_400:00-mdio-0/temp1=NIC
+lmsensors/r8169_0_500:00-mdio-0/temp1=NIC
 lmsensors/spd5118-i2c-8-51/temp1=RAM
 
 [Face-94053970295360][Sensors]
-highPrioritySensorIds=["cpu/all/averageTemperature","gpu/gpu1/temperature","lmsensors/nct6686-isa-0a20/temp1","lmsensors/spd5118-i2c-8-51/temp1","lmsensors/nct6686-isa-0a20/temp2","lmsensors/nvme-pci-0300/temp1","lmsensors/r8169_0_400:00-mdio-0/temp1","lmsensors/nct6686-isa-0a20/temp3"]
+highPrioritySensorIds=["cpu/all/averageTemperature","gpu/gpu1/temperature","lmsensors/nct6686-isa-0a20/temp1","lmsensors/spd5118-i2c-8-51/temp1","lmsensors/nct6686-isa-0a20/temp2","lmsensors/nvme-pci-0300/temp1","lmsensors/r8169_0_500:00-mdio-0/temp1","lmsensors/mt7921_phy0-pci-0400/temp1","lmsensors/nct6686-isa-0a20/temp3"]
 lowPrioritySensorIds=[]
+totalSensors=[]
 
 [Face-94053970295360][org.kde.ksysguard.linechart][General]
 historyAmount=300
-lineChartFillOpacity=0
+lineChartFillOpacity=5
+lineChartSmooth=false
+lineChartStacked=
 rangeAutoY=false
-rangeFromY=25
-rangeToY=65
+rangeFromY=30
+rangeToY=70
+showGridLines=
+showLegend=
+showYAxisLabels=
 
 [Face-94053970696496][Appearance]
 chartFace=org.kde.ksysguard.facegrid
 title=CPU
-updateRateLimit=1500
+updateRateLimit=1000
 
 [Face-94053970696496][FaceGrid][Appearance]
 chartFace=org.kde.ksysguard.linechart
 showTitle=false
-updateRateLimit=1500
+updateRateLimit=1000
 
 [Face-94053970696496][FaceGrid][SensorColors]
 cpu/cpu0/usage=61,174,233
@@ -100,7 +110,8 @@ highPrioritySensorIds=["cpu/cpu15/usage"]
 
 [Face-94053970696496][FaceGrid][org.kde.ksysguard.linechart][General]
 historyAmount=300
-lineChartFillOpacity=100
+lineChartFillOpacity=
+lineChartSmooth=false
 lineChartStacked=
 rangeAutoY=false
 showGridLines=
@@ -171,12 +182,12 @@ historyAmount=120
 [Face-94054118236560][Appearance]
 chartFace=org.kde.ksysguard.linechart
 title=Power
-updateRateLimit=1500
+updateRateLimit=1000
 
 [Face-94054118236560][FaceGrid][Appearance]
 chartFace=org.kde.ksysguard.linechart
 showTitle=false
-updateRateLimit=1500
+updateRateLimit=1000
 
 [Face-94054118236560][FaceGrid][SensorColors]
 disk/nvme0n1/read=61,233,88
@@ -213,13 +224,14 @@ lowPrioritySensorIds=[]
 
 [Face-94054118236560][org.kde.ksysguard.linechart][General]
 historyAmount=300
+lineChartSmooth=false
 rangeAutoY=false
 rangeToY=80
 
 [Face-94054146401872][Appearance]
 chartFace=org.kde.ksysguard.linechart
 title=Memory
-updateRateLimit=1500
+updateRateLimit=1000
 
 [Face-94054146401872][SensorColors]
 memory/physical/applicationPercent=61,213,233
@@ -241,30 +253,38 @@ lowPrioritySensorIds=["memory/physical/used","memory/physical/application","memo
 
 [Face-94054146401872][org.kde.ksysguard.linechart][General]
 historyAmount=300
+lineChartSmooth=false
 
 [Face-94133619646016][Appearance]
 chartFace=org.kde.ksysguard.linechart
 title=Network
-updateRateLimit=1500
+updateRateLimit=1000
 
 [Face-94133619646016][SensorColors]
 network/enp4s0/download=0,170,255
 network/enp4s0/upload=0,97,145
+network/enp5s0/download=61,174,233
+network/enp5s0/upload=233,120,61
 
 [Face-94133619646016][SensorLabels]
 network/enp4s0/download=Download
 network/enp4s0/upload=Upload
+network/enp5s0/download=Download
+network/enp5s0/upload=Upload
 
 [Face-94133619646016][Sensors]
-highPrioritySensorIds=["network/enp4s0/download","network/enp4s0/upload"]
+highPrioritySensorIds=["network/enp5s0/download","network/enp5s0/upload"]
+lowPrioritySensorIds=[]
+totalSensors=[]
 
 [Face-94133619646016][org.kde.ksysguard.linechart][General]
 historyAmount=300
+lineChartSmooth=false
 
 [Face-94133701651632][Appearance]
 chartFace=org.kde.ksysguard.linechart
 title=Disk
-updateRateLimit=1500
+updateRateLimit=1000
 
 [Face-94133701651632][SensorColors]
 disk/nvme0n1/read=0,170,0
@@ -279,11 +299,12 @@ highPrioritySensorIds=["disk/nvme0n1/read","disk/nvme0n1/write"]
 
 [Face-94133701651632][org.kde.ksysguard.linechart][General]
 historyAmount=300
+lineChartSmooth=false
 
 [Face-94333476531424][Appearance]
 chartFace=org.kde.ksysguard.textonly
 showTitle=false
-updateRateLimit=1500
+updateRateLimit=1000
 
 [Face-94333476531424][SensorColors]
 cpu/all/system=61,154,233
@@ -295,9 +316,9 @@ gpu/gpu1/usage=0,170,255
 gpu/gpu1/usedVram=0,170,255
 
 [Face-94333476531424][SensorLabels]
-gpu/gpu1/coreFrequency=GPU Frequency
+gpu/gpu1/coreFrequency=GPU Freq
 gpu/gpu1/usage=GPU Usage
-gpu/gpu1/usedVram=GPU Memory
+gpu/gpu1/usedVram=GPU Mem
 
 [Face-94333476531424][Sensors]
 highPrioritySensorIds=["gpu/gpu1/usedVram","gpu/gpu1/usage","gpu/gpu1/coreFrequency"]
@@ -305,23 +326,24 @@ highPrioritySensorIds=["gpu/gpu1/usedVram","gpu/gpu1/usage","gpu/gpu1/coreFreque
 [Face-94333478684288][Appearance]
 chartFace=org.kde.ksysguard.textonly
 showTitle=false
-updateRateLimit=1500
+updateRateLimit=1000
 
 [Face-94333478684288][SensorColors]
 cpu/all/averageFrequency=233,61,225
 cpu/all/maximumFrequency=170,0,0
 cpu/all/minimumFrequency=0,170,0
 cpu/all/system=233,61,93
-cpu/all/usage=233,150,61
+cpu/all/usage=0,170,0
 cpu/all/user=172,233,61
 
 [Face-94333478684288][SensorLabels]
 cpu/all/averageFrequency=Avg
 cpu/all/maximumFrequency=Max
 cpu/all/minimumFrequency=Min
+cpu/all/usage=Usage
 
 [Face-94333478684288][Sensors]
-highPrioritySensorIds=["cpu/all/maximumFrequency","cpu/all/minimumFrequency"]
+highPrioritySensorIds=["cpu/all/usage","cpu/all/maximumFrequency"]
 
 [Face-94615221328912][Appearance]
 chartFace=org.kde.ksysguard.textonly
@@ -357,7 +379,7 @@ lowPrioritySensorIds=[]
 Title=All in one
 actionsFace=
 icon=speedometer
-loadType=ondemand
+loadType=onstart
 margin=1
 version=1
 
